@@ -1,0 +1,6 @@
+{
+  "name": "Durung - Voice-First Personal Finance Coach",
+  "description": "Voice-first personal finance coach and living money model for salaried young Indians.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

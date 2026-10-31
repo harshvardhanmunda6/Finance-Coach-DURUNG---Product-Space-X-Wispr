@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* 10/10 Editorial Cream Palette for 22-30 Young Indian Professionals (Cred & Copilot Inspired) */
+    --bg-app: #F8F5EE;
+    --surface-app: #FFFFFF;
+    --surface-secondary: #F2ECE0;
+    --surface-cream: #FBF8F2;
+    --ink-primary: #121311;
+    --ink-muted: #6B685F;
+    --line-border: #E6DDCF;
+    --accent-emerald: #145946;
+    --accent-emerald-light: #E8F3EE;
+    --accent-emerald-border: #C8E2D7;
+
+    /* Semantic Transaction Colors */
+    --credit-green: #15803D;
+    --credit-green-light: #EAF7EE;
+    --debit-red: #DC2626;
+    --debit-red-light: #FEECEB;
+    --pending-amber: #D97706;
+    --pending-amber-light: #FEF3C7;
+
+    --alert-coral: #E4572E;
+    --alert-coral-light: #FCECE8;
+    --caution-gold: #D9A441;
+    --caution-gold-light: #FBF4E7;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+      /* Obsidian Matte Dark Mode (Linear / Raycast / Cred Style) */
+      --bg-app: #0A0B0D;
+      --surface-app: #131417;
+      --surface-secondary: #1D1E22;
+      --surface-cream: #18191D;
+      --ink-primary: #F5F4EE;
+      --ink-muted: #95938B;
+      --line-border: #23252A;
+      --accent-emerald: #2EAF8C;
+      --accent-emerald-light: #122820;
+      --accent-emerald-border: #1E4D3D;
+
+      --credit-green: #22C55E;
+      --credit-green-light: #112818;
+      --debit-red: #EF4444;
+      --debit-red-light: #331515;
+      --pending-amber: #F59E0B;
+      --pending-amber-light: #302410;
+
+      --alert-coral: #F06E48;
+      --alert-coral-light: #321915;
+      --caution-gold: #E5B354;
+      --caution-gold-light: #302614;
+    }
+  }
+
+  :root.dark, .dark {
+    --bg-app: #0A0B0D;
+    --surface-app: #131417;
+    --surface-secondary: #1D1E22;
+    --surface-cream: #18191D;
+    --ink-primary: #F5F4EE;
+    --ink-muted: #95938B;
+    --line-border: #23252A;
+    --accent-emerald: #2EAF8C;
+    --accent-emerald-light: #122820;
+    --accent-emerald-border: #1E4D3D;
+
+    --credit-green: #22C55E;
+    --credit-green-light: #112818;
+    --debit-red: #EF4444;
+    --debit-red-light: #331515;
+    --pending-amber: #F59E0B;
+    --pending-amber-light: #302410;
+
+    --alert-coral: #F06E48;
+    --alert-coral-light: #321915;
+    --caution-gold: #E5B354;
+    --caution-gold-light: #302614;
+  }
+
+  :root.light {
+    --bg-app: #F8F5EE;
+    --surface-app: #FFFFFF;
+    --surface-secondary: #F2ECE0;
+    --surface-cream: #FBF8F2;
+    --ink-primary: #121311;
+    --ink-muted: #6B685F;
+    --line-border: #E6DDCF;
+    --accent-emerald: #145946;
+    --accent-emerald-light: #E8F3EE;
+    --accent-emerald-border: #C8E2D7;
+
+    --credit-green: #15803D;
+    --credit-green-light: #EAF7EE;
+    --debit-red: #DC2626;
+    --debit-red-light: #FEECEB;
+    --pending-amber: #D97706;
+    --pending-amber-light: #FEF3C7;
+
+    --alert-coral: #E4572E;
+    --alert-coral-light: #FCECE8;
+    --caution-gold: #D9A441;
+    --caution-gold-light: #FBF4E7;
+  }
+
+  body {
+    background-color: var(--bg-app);
+    color: var(--ink-primary);
+    font-family: 'Inter Tight', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    touch-action: manipulation;
+  }
+}
+
+/* 10/10 Cream Canvas with ambient warm orbs & tactile micro-texture */
+.cream-canvas {
+  background-color: var(--bg-app);
+  background-image: 
+    radial-gradient(circle at 8% 6%, rgba(228, 214, 192, 0.45) 0%, transparent 42%),
+    radial-gradient(circle at 92% 14%, rgba(212, 228, 220, 0.35) 0%, transparent 38%),
+    radial-gradient(circle at 85% 85%, rgba(224, 208, 185, 0.4) 0%, transparent 45%),
+    radial-gradient(circle at 15% 90%, rgba(215, 232, 224, 0.3) 0%, transparent 40%),
+    radial-gradient(rgba(120, 110, 95, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 24px 24px;
+}
+
+.dark .cream-canvas {
+  background-color: var(--bg-app);
+  background-image: 
+    radial-gradient(circle at 10% 8%, rgba(24, 48, 40, 0.35) 0%, transparent 40%),
+    radial-gradient(circle at 90% 88%, rgba(35, 30, 20, 0.25) 0%, transparent 42%),
+    radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 24px 24px;
+}
+
+/* Custom utility classes */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.card-durung {
+  background-color: var(--surface-app);
+  border: 1px solid var(--line-border);
+  border-radius: 24px;
+  box-shadow: 
+    0 1px 3px rgba(35, 25, 10, 0.03),
+    0 8px 24px -10px rgba(50, 40, 25, 0.03);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dark .card-durung {
+  box-shadow: 
+    0 1px 3px rgba(0, 0, 0, 0.25),
+    0 12px 32px -12px rgba(0, 0, 0, 0.4);
+}
+
+.control-durung {
+  border-radius: 14px;
+}
+
+.hero-number {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Safe bottom spacing for fixed command bar and bottom nav */
+.content-safe-bottom {
+  padding-bottom: 160px;
+}
